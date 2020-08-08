@@ -1,0 +1,306 @@
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+NAVBAR
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+h2 {
+  padding-top: 20px !important;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+NAVBAR
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  padding: 15px 0;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 !important;
+}
+
+h1 .navbar-brand {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  font-size: 34px;
+}
+
+.navbar__logo {
+  margin: 10px 0 0 0;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;
+}
+
+.navbar-toggle {
+  order: 2;
+  margin-left: auto;
+}
+
+ul .dropdown-menu {
+  min-width: 210px;
+}
+
+@media (min-width: 768px) {
+  .navbar .container {
+    width: 100%;
+    padding: 8px 15px;
+  }
+
+  .navbar__logo {
+    margin-top: 0;
+  }
+
+  ul.nav {
+    margin-top: 0;
+  }
+
+  .nav li {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  h1.navbar__logo {
+    font-size: 36px;
+  }
+
+  .nav li {
+    font-size: 16px;
+  }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+FOOTER
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.bottom__logo {
+  margin-bottom: 20px;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+}
+
+.midnight-blue {
+  text-align: center;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+HOME PAGE - FEATURES SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.features {
+  background-color: #fafafa !important;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+HOME PAGE - TECHNOLOGIES SECTION
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.technologies__back-end {
+  text-align: left;
+}
+
+#content p span {
+  font-style: italic;
+}
+
+#content img {
+  margin-bottom: 20px;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ABOUT PAGE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.about-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/team.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.team__description {
+  text-align: left;
+}
+
+.feature__tile {
+  margin-bottom: 40px;
+}
+
+.feature__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feature__image {
+  display: inline-block;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.feature__title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px !important;
+}
+
+.feature__heading {
+  font-size: 32px;
+  margin: 0 0 6px 0 !important;
+}
+
+.feature__id {
+  font-size: 14px;
+  margin: 0 !important;
+}
+
+.feature__paragraph {
+  font-size: 14px !important;
+  margin-bottom: 10px !important;
+}
+
+.feature__button:link,
+.feature__button:visited {
+  display: block;
+  width: 70%;
+  margin-top: 20px;
+  border: transparent solid 1px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background-color: #ec5538;
+  color: #fff;
+  text-align: center;
+}
+
+.feature__button:hover,
+.feature__button:active {
+  border: #ec5538 solid 1px;
+  background-color: #fafafa;
+  color: #ec5538;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INDUSTRY DATA PAGE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.industry-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/data.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.industry__heading {
+  font-size: 24px;
+  color: #787878;
+}
+
+.industry__subheading {
+  font-size: 18px;
+  color: #787878;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+IT WORK PAGE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.it-work-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/it-work.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.work__header {
+  font-size: 24px;
+  color: #787878;
+}
+
+.work__columns {
+  column-count: 2;
+  column-gap: 40px;
+  margin-top: 40px;
+}
+
+.work_subheader {
+  font-size: 16px;
+  color: #787878;
+}
+
+.work__image {
+  margin: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .work__columns {
+    column-count: 1;
+  }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+IT TECHNOLOGIES PAGE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.it-technologies-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/technologies.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.it-technologies__heading {
+  font-size: 24px;
+}
+
+.technologies__columns {
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.technologies__image {
+  margin: 40px 0;
+}
+
+.it-technologies__subheading {
+  font-size: 16px;
+  color: #787878;
+}
+
+@media (max-width: 768px) {
+  .technologies__columns {
+    column-count: 1;
+  }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+TOOLS PAGE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.tools-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/tools.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.tools__heading {
+  font-size: 24px;
+}
+
+.tools__subheading {
+  color: #787878;
+}
