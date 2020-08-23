@@ -45,7 +45,7 @@ h1 .navbar-brand {
 }
 
 ul .dropdown-menu {
-  min-width: 210px;
+  min-width: 260px;
 }
 
 @media (min-width: 768px) {
@@ -214,44 +214,6 @@ INDUSTRY DATA PAGE
 
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-IT WORK PAGE
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.it-work-hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/it-work.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-}
-
-.work__header {
-  font-size: 24px;
-  color: #787878;
-}
-
-.work__columns {
-  column-count: 2;
-  column-gap: 40px;
-  margin-top: 40px;
-}
-
-.work_subheader {
-  font-size: 16px;
-  color: #787878;
-}
-
-.work__image {
-  margin: 40px 0;
-}
-
-@media (max-width: 768px) {
-  .work__columns {
-    column-count: 1;
-  }
-}
-
-
-
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 IT TECHNOLOGIES PAGE
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .it-technologies-hero {
@@ -292,6 +254,26 @@ TOOLS PAGE
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .tools-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/tools.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.tools__heading {
+  font-size: 24px;
+}
+
+.tools__subheading {
+  color: #787878;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SKILLS PAGE
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.skills-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/it-work.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
