@@ -207,6 +207,12 @@ PROJECT PAGE
   color: #787878;
 }
 
+.project__subheading {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #787878;
+}
+
 .project__list {
   list-style: none;
 }
@@ -215,13 +221,13 @@ li.lead {
   font-weight: 700;
 }
 
-.project__subheading {
-  font-size: 20px;
-  color: #787878;
-}
 
 .aims {
   background-color: #eaeaea;
+}
+
+.plans {
+  background-color: #fafafa;
 }
 
 
