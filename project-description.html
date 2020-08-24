@@ -316,26 +316,179 @@
             describe and justify these. If not, describe your process and
             justify why there are no specific roles.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Scope and Limits -->
+  <section id="scope" class="about-us scope">
+    <div class="container">
+      <div class="row">
+        <h2 class="project__heading">Scope and Limits</h2>
 
+        <div class="col-md-6">
+          <h3 class="project__subheading">Overall Description</h3>
+          <p class="project__text">The purpose of this project is to develop a
+            tool that makes network performance testing, specifically
+            throughput, more user friendly.</p>
+          <p class="project__text">Building on the iPerf tool and adding a
+            user-friendly interface to the client side of the testing, to enable
+            a less skilled individual to execute specific tests and submit the
+            results back to a network engineering support person to be assessed.
+          </p>
 
+          <h3 class="project__subheading">Deliverables</h3>
+          <p class="project__text">A portable application which can be stored on
+            a USB drive, that will auto run when inserted into a PC. The
+            application will contain a simple UI with 5 buttons, 4 of the
+            buttons will be used to run tests, and the 5th button will be used
+            to submit results back to the network engineer requesting the
+            testing.</p>
 
+          <h3 class="project__subheading">Justification</h3>
+          <p class="project__text">The justification for this project is that
+            iPerf, while a highly useful and functional tool, however it lacks
+            user friendliness. A user must be familiar with the command line,
+            and command line switches, understand the default settings for
+            bandwidth use for TCP and UDP traffic, and many other variations.
+          </p>
+          <p class="project__text">The UI can be configured to use specific IPs
+            for testing, enabling a standard user with no installation rights or
+            other admin rights, to execute the test and send results back to the
+            support team.</p>
+          <p class="project__text">This will enable the network support team in
+            an organisation to be more focused on resolving performance issues,
+            rather than needing to travel to a remote site, just to run a test.
+          </p>
+          <p class="project__text">If network performance is in a degraded
+            state, having a support person remotely connect to a site may not be
+            possible, and may influence the test results, especially on high
+            latency connections like satellite.</p>
 
+          <h3 class="project__subheading">Assumptions</h3>
+          <p class="project__text">Assumptions made for this project are that it
+            will initially be developed for testing private WAN connections in
+            corporate environments, where frequently servers and applications
+            are centralised, while staff of the organisation are based at other
+            locations.</p>
+          <p class="project__text">This testing can also be utilized for testing
+            the performance of links over an IPSec VPN from a remote office,
+            back to private cloud hosted infrastructure in a datacentre. Testing
+            the ability of routers and firewalls to encrypt and decrypt traffic
+            on the path, which is a process that can impact the throughput of
+            traffic between client and server.</p>
+          <p class="project__text">This will initially be developed for use in a
+            Windows client environment, with the deployment of the server end
+            connection available in either Windows or Linux form. The
+            application can be set to run as a daemon on an existing server or
+            be setup as a standalone virtual machine on existing infrastructure.
+          </p>
 
+          <h3 class="project__subheading">Exclusions</h3>
+          <p class="project__text">Exclusions for this project are to exclude
+            any development and testing against Apple PC devices, or portable
+            devices at this stage, such as tablets and phones. The reason for
+            this is simply that this product is not designed to test generic
+            network accessibility, but specific network performance in the
+            ability of a link to sustain and maintain throughput, without a
+            large amount of jitter.</p>
+          <p class="project__text">Jitter on a network can be catastrophic for
+            applications such as voice, video, and other intensive applications
+            such as SQL.</p>
+          <p class="project__text">As mobile devices are not often used as an
+            endpoint for LAN/WAN connectivity inside an organisation, these
+            devices have been excluded from development and testing.</p>
+        </div>
 
+        <div class="col-md-6">
+          <h3 class="project__subheading">Constraints</h3>
+          <p class="project__text">The major constraint is to have a network
+            available for testing, with a WAN segment. For testing and proof of
+            concept purposes, a server has been configured to run as an iPerf
+            server daemon in a datacentre in Adelaide. The server is a Windows
+            Server 2019 DataCenter virtual machine, running on Dell R730
+            hardware. The server is protected by a Cisco ASA and has rules to
+            permit only traffic on the iPerf ports, NAT rules for a public IP
+            address and a DNS A record for public DNS availability.
+            Additionally, the firewall is running FirePower IPS and is scanning
+            all traffic for attack signatures. The scanning of this traffic will
+            limit the performance, but it is expected this performance will be
+            adequate for testing and demonstration purposes. These constraints
+            would unlikely be present in a private WAN environment, as IPS in
+            particular, is normally only used on a boundary to a public network
+            like the Internet.</p>
+          <p class="project__text">On the front-end side, there are significant
+            constraints that are yet to be solved. If not mitigated, these
+            constraints may render the initial product implementation concept
+            not viable and may require a review of the technology stack used to
+            implement the product functionality. The main constraints are listed
+            below:</p>
 
+          <ul class="project__list--disc">
+            <li class="project__list-item"><strong>Auto-run feature:</strong>
+              The application entry point is an html file that needs to run
+              automatically when the thumb drive is connected to the PC.
+              However, security guidelines implemented from Windows 8 do not
+              allow for an autorun.inf file to run automatically, unless the
+              Windows settings are specifically customised to allow for that.
+              Apart from corporate environments, where admin settings are
+              defined globally and users unable to change these settings, there
+              is no control over this. This represents a potential scenario,
+              where the user would need to run the application manually.</li>
+            <li class="project__list-item"><strong>Executing *.exe files from
+                html documents:</strong>The initial product concept relies on
+              triggering the execution of the iPerf executable (iperf3.exe +
+              switches) from the html, either via <em>a</em>, <em>button</em>,
+              or <em>input</em>
+              tags. However, due to security restrictions, local files, such
+              as the files stores in the thumb drive packages folder, cannot
+              be triggered directly from the html file.
+            </li>
+          </ul>
 
+          <p class="project__text">Alternative explored implementations can
+            also add additional constraints.</p>
 
+          <ul class="project__list--disc">
+            <li class="project__list-item"><strong>JavaScript (JS):</strong>
+              using JS to trigger an event listener executing the iPerf command
+              is also not an option for the same reason. Vanilla JS in its
+              current version cannot execute local files, similarly to html.
+            </li>
+            <li class="project__list-item"><strong>ActiveX:</strong> an ActiveX
+              object can be executed, although all modern browsers have ceased
+              to support ActiveX commands, due to security concerns. In our
+              initial testing, Internet Explorer was able to trigger the
+              command. However, as we can’t guarantee that users will have
+              Internet Explorer installed and as their default browser, this was
+              also considered a non-viable option.</li>
+            <li class="project__list-item"><strong>NodeJS:</strong> Node JS can
+              access local files, however its scripts need to be run from a web
+              server. Therefore, this was not considered a viable option, as our
+              product needs to be able to be accessed locally when the user does
+              not have access to a network as well as when the network traffic
+              is unreliable.</li>
+          </ul>
 
+          <p class="project__text">This could be done however using other
+            technologies not yet explored in depth at this stage, such as PHP,
+            Python (Flask or django), Java or C# (.NET Core).</p>
 
-
-
-
-
-
-
-
-
+          <ul class="project__list--disc">
+            <li class="project__list-item"><strong>User does not have an email
+                client:</strong> Another feature that include constraints, from
+              a technology implementation perspective, relates to the way that
+              the user informs the network support team. When the user presses
+              the ‘Send’ button, a ‘mailto:’ link is run attaching the test
+              results files to the email and addressing it to the support team
+              email address. There are 2 limitations that need to be addresses
+              before this solution can be implemented: poor network traffic may
+              render emailing difficult or impossible, and if the user does not
+              have an email client installed at the moment they attempt to send
+              the test results, no email is generated.
+            </li>
+          </ul>
+        </div>
 
       </div>
     </div>

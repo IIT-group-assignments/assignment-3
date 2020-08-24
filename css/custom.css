@@ -223,11 +223,19 @@ li.lead {
 
 
 .aims {
-  background-color: #eaeaea;
+  background-color: #f1f1f1;
 }
 
 .plans {
   background-color: #fafafa;
+}
+
+.scope {
+  background-color: #f1f1f1;
+}
+
+.project__list--disc {
+  list-style: disc;
 }
 
 
